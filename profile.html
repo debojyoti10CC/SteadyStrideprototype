@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">STEADYSTRIDE</div>
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li> <!-- Active link -->
+                <li><a href="report.html">Report</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+            <div class="navbar-user">User Profile</div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <div class="left-column">
+            <h2>User Information</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="input-field" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="input-field" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" class="input-field" required>
+
+                <button type="submit" class="save-button">Save</button>
+            </form>
+        </div>
+
+        <div class="right-column">
+            <h2>Survey</h2>
+            <form>
+                <p>1. How satisfied are you with our service?</p>
+                <label><input type="radio" name="satisfaction" value="Very Satisfied"> Very Satisfied</label><br>
+                <label><input type="radio" name="satisfaction" value="Satisfied"> Satisfied</label><br>
+                <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label><br>
+                <label><input type="radio" name="satisfaction" value="Dissatisfied"> Dissatisfied</label><br>
+                <label><input type="radio" name="satisfaction" value="Very Dissatisfied"> Very Dissatisfied</label><br>
+
+                <p>2. Would you recommend us?</p>
+                <label><input type="radio" name="recommend" value="Yes"> Yes</label><br>
+                <label><input type="radio" name="recommend" value="No"> No</label><br>
+
+                <p>3. Any additional comments?</p>
+                <label><input type="radio" name="comments" value="Yes"> Yes</label><br>
+                <label><input type="radio" name="comments" value="No"> No</label><br>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <span>💬</span>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div class="chatbot-container" id="chatbot">
+        <h3>Chat with us!</h3>
+        <div class="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" placeholder="Type your message..." class="chat-input">
+        <button class="send-button">Send</button>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

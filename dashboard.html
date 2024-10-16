@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteadyStride - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">STEADYSTRIDE</div>
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html"class="active">Home</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+            <div class="navbar-user">User Profile</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="circle-section">
+            <!-- Left Circle (Connect Button) -->
+            <div class="circle left-circle">
+                <div class="connect-button">
+                    <span class="bluetooth-symbol">Connect</span>
+                </div>
+            </div>
+
+            <!-- Center Circle (Data Display) -->
+            <div class="circle center-circle">
+                <div class="axis-data">
+                    <div class="axis">X: <span id="x-value">0.0</span></div>
+                    <div class="axis">Y: <span id="y-value">0.0</span></div>
+                    <div class="axis">Z: <span id="z-value">0.0</span></div>
+                </div>
+            </div>
+
+            <!-- Right Circle (Tremor Stage) -->
+            <div class="circle right-circle">
+                <div class="stage-display" id="stage">0</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="connect-form">
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Email" class="input-field">
+                <input type="submit" value="Connect">
+            </form>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 SteadyStride. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

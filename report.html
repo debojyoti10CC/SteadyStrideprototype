@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Report Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">STEADYSTRIDE</div>
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a class="active" href="report.html">Report</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+            <div class="navbar-user">User</div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1 class="animated-text">Welcome to the Report Page</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="report-grid">
+            <div class="report-box" onclick="generateReport('daily')">
+                <img src="daily.png" alt="Daily Report" class="report-image">
+                <p>Daily Report</p>
+            </div>
+            <div class="report-box" onclick="generateReport('weekly')">
+                <img src="weekly.png" alt="Weekly Report" class="report-image">
+                <p>Weekly Report</p>
+            </div>
+            <div class="report-box" onclick="generateReport('monthly')">
+                <img src="monthly.png" alt="Monthly Report" class="report-image">
+                <p>Monthly Report</p>
+            </div>
+            <div class="report-box" onclick="generateReport('overall')">
+                <img src="overall.png" alt="Overall Report" class="report-image">
+                <p>Overall Report</p>
+            </div>
+        </div>
+
+        <div class="generate-report">
+            <button class="generate-button" onclick="showLoading()">Generate Report</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Connect with us</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p class="copyright">© 2024 STEADYSTRIDE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function generateReport(type) {
+            alert(`Generating ${type} report...`);
+        }
+
+        function showLoading() {
+            alert("Loading report...");
+        }
+    </script>
+</body>
+</html>
+
